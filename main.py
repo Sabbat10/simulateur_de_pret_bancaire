@@ -1,3 +1,4 @@
+from banque.pret import info_client
 
 while True:
     print("\n🏦 Bienvenue à la Banque pour faire un prêt")
@@ -11,6 +12,14 @@ while True:
     if choice == "1":
         print("✅ Vous avez choisi de demander un prêt.")
         # 👉 Code pour demander un prêt ici
+        nom = input("Entrez votre nom: ")
+        age = input("Entrez votre âge: ")
+        montant = input("Entrez le montant demandé: ")
+        taux = input("Entrez le taux d'intérêt: ")
+        duree = input("Entrez la durée du prêt (en mois): ")
+        # Appel de la fonction info_client
+        info_client(nom, age, montant, taux, duree)
+        print("✅ Votre demande de prêt a été enregistrée.")
 
     elif choice == "2":
         print("📄 Vous avez choisi d'obtenir le document de prêt.")
